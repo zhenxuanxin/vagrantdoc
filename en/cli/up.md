@@ -1,11 +1,12 @@
-# UP #
+
+# Up
 **Command:** `vagrant up`
 
 This command creates and configures guest machines according to your [Vagrantfile][vagrantfile].
 
 This is the single most important command in Vagrant, since it is how any Vagrant machine is created. Anyone using Vagrant must use this command on a day-to-day basis.
 
-## OPTIONS ##
+## Options
 
 * `--[no-]destroy-on-error` - Destroy the newly created machine if a fatal, unexpected error occurs. This will only happen on the first `vagrant up`. By default this is set.
 

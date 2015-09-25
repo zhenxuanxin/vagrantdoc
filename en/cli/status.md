@@ -1,4 +1,5 @@
-# STATUS
+
+# Status
 **Command:** `vagrant status`
 
 This will tell you the state of the machines Vagrant is managing.

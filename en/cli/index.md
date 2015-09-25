@@ -1,4 +1,5 @@
-# COMMAND-LINE INTERFACE #
+
+# Command-Line Interface
 Almost all interaction with Vagrant is done through the command-line interface.
 
 The interface is available using the `vagrant` command, and comes installed with Vagrant automatically. The `vagrant` command in turn has many subcommands, such as `vagrant up`, `vagrant destroy`, etc.

@@ -1,4 +1,5 @@
-# UP AND SSH #
+
+# Up And SSH
 It is time to boot your first Vagrant environment. Run the following:
 ```
 $ vagrant up

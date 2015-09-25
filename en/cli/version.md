@@ -1,4 +1,5 @@
-# VERSION #
+
+# Version
 **Command:** `vagrant version`
 
 This command tells you the version of Vagrant you have installed as well as the latest version of Vagrant that is currently available.

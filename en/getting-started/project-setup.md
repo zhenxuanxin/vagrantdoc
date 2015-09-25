@@ -1,4 +1,5 @@
-# PROJECT SETUP #
+
+# Project Setup
 The first step in configuring any Vagrant project is to create a [Vagrantfile][vagrantfile]. The purpose of the Vagrantfile is twofold:
 
 1. Mark the root directory of your project. A lot of the configuration of Vagrant is relative to this root directory.

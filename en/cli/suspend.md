@@ -1,4 +1,5 @@
-# SUSPEND #
+
+# Suspend
 **Command:** `vagrant suspend`
 
 This suspends the guest machine Vagrant is managing, rather than fully [shutting it down][halt] or [destroying][destory] it.

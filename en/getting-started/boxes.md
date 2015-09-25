@@ -1,7 +1,8 @@
-# BOXES #
+
+# Boxes
 Instead of building a virtual machine from scratch, which would be a slow and tedious process, Vagrant uses a base image to quickly clone a virtual machine. These base images are known as boxes in Vagrant, and specifying the box to use for your Vagrant environment is always the first step after creating a new Vagrantfile.
 
-## INSTALLING A BOX ##
+## Installing A Box
 If you ran the commands on the [getting started overview][overview] page, then you've already installed a box before, and you don't need to run the commands below again. However, it is still worth reading this section to learn more about how boxes are managed.
 
 Boxes are added to Vagrant with `vagrant box add`. This stores the box under a specific name so that multiple Vagrant environments can re-use it. If you haven't added a box yet, you can do so now:
@@ -12,7 +13,7 @@ This will download the box named "hashicorp/precise32" from [HashiCorp's Atlas b
 
 Added boxes can be re-used by multiple projects. Each project uses a box as an initial image to clone from, and never modifies the actual base image. This means that if you have two projects both using the `hashicorp/precise32` box we just added, adding files in one guest machine will have no effect on the other machine.
 
-## USING A BOX ##
+## Using A Box
 Now that the box has been added to Vagrant, we need to configure our project to use it as a base. Open the `Vagrantfile` and change the contents to the following:
 ```
 Vagrant.configure("2") do |config|
@@ -23,7 +24,7 @@ The "hashicorp/precise32" in this case must match the name you used to add the b
 
 In the next section, we'll bring up the Vagrant environment and interact with it a little bit.
 
-## FINDING MORE BOXES ##
+## Finding More Boxes
 For the remainder of this getting started guide, we'll only use the "hashicorp/precise32" box we added previously. But soon after finishing this getting started guide, the first question you'll probably have is "where do I find more boxes?"
 
 The best place to find more boxes is [HashiCorp's Atlas box catalog][hashicorp]. HashiCorp's Atlas has a public directory of freely available boxes that run various platforms and technologies. HashiCorp's Atlas also has a great search feature to allow you to find the box you care about.

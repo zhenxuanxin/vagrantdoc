@@ -1,17 +1,18 @@
-# MACHINE READABLE OUTPUT #
+
+# Machine Readable Output
 Every Vagrant command accepts a `--machine-readable` flag which enables machine readable output mode. In this mode, the output to the terminal is replaced with machine-friendly output.
 
 This mode makes it easy to programmatically execute Vagrant and read data out of it. This output format is protected by our [backwards compatibility][backwards-compatibility] policy. Until Vagrant 2.0 is released, however, the machine readable output may change as we determine more use cases for it. But the backwards compatibility promise should make it safe to write client libraries to parse the output format.
 
 > **Advanced topic!** This is an advanced topic for use only if you want to programmatically execute Vagrant. If you're just getting started with Vagrant, you may safely skip this section.
 
-## WORK-IN-PROGRESS ##
+## Work-In-Progress
 
 The machine-readable output is very new (released as part of Vagrant 1.4). We're still gathering use cases for it and building up the output for each of the commands. It is likely that what you may want to achieve with the machine-readable output is not possible due to missing information.
 
 In this case, we ask that you please [open an issue][issues] requesting that certain information become available. We'll most likely add it!
 
-## FORMAT ##
+## Format
 
 The machine readable format is a line-oriented, comma-delimeted text format. This makes it extremely easy to parse using standard Unix tools such as awk or grep in addition to full programming languages like Ruby or Python.
 
@@ -33,7 +34,7 @@ Within the format, if data contains a comma, it is replaced with `%!(VAGRANT_COM
 
 Newlines within the format are replaced with their respective standard escape sequence. Newlines become a literal `\n` within the output. Carriage returns become a literal `\r`.
 
-## TYPES ##
+## Types
 
 This section documents all the available types that may be outputted with the machine-readable output.
 

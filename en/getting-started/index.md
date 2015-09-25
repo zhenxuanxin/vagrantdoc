@@ -1,4 +1,5 @@
-# GETTING STARTED #
+
+# Getting Started
 The Vagrant getting started guide will walk you through your first Vagrant project, and show off the basics of the major features Vagrant has to offer.
 
 If you're curious what benefits Vagrant has to offer, you should also read the ["Why Vagrant?"][why-vagrant] page.
@@ -9,7 +10,7 @@ Before diving into your first project, please [install the latest version of Vag
 
 > More of a book person? If you prefer to read a physical book, you may be interested in [Vagrant: Up and Running][book] , written by the author of Vagrant and published by O'Reilly.
 
-## UP AND RUNNING ##
+## Up And Running
 ```
 $ vagrant init hashicorp/precise32
 $ vagrant up

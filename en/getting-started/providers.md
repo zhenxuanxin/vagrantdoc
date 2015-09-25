@@ -1,4 +1,5 @@
-# PROVIDERS #
+
+# Providers
 In this getting started guide, your project was always backed with [VirtualBox][virtualbox]. But Vagrant can work with a wide variety of backend providers, such as [VMware][vmware], AWS[aws], and more. Read the page of each provider for more information on how to set them up.
 
 Once you have a provider installed, you don't need to make any modifications to your Vagrantfile, just `vagrant up` with the proper provider and Vagrant will do the rest:
