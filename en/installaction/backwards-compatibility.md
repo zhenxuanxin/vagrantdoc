@@ -1,5 +1,6 @@
-# BACKWARDS COMPATIBILITY #
-## FOR 1.0.X ##
+
+# Backwards Compatibility
+## For 1.0.x
 Vagrant 1.1+ provides full backwards compatibility for valid Vagrant 1.0.x Vagrantfiles which don't use plugins. After installing Vagrant 1.1, your 1.0.x environments should continue working without modifications, and existing running machines will continue to be managed properly.
 
 This compatibility layer will remain in Vagrant up to and including Vagrant 2.0. It may still exist after that, but Vagrant's compatibility promise is only for two versions. Seeing that major Vagrant releases take years to develop and release, it is safe to tick with your version 1.0.x Vagrantfile for the time being.
@@ -8,7 +9,7 @@ If you use any Vagrant 1.0.x plugins, you must remove references to these from y
 
 If your Vagrantfile doesn't just work with 1.1 and doesn't use any plugins, please report a bug.
 
-## FOR 1.X ##
+## For 1.x
 Backwards compatibility between 1.x is not promised, and Vagrantfile syntax stability isn't promised until 2.0 final. Any backwards incompatibilities within 1.x will be clearly documented.
 
 This is similar to how Vagrant 0.x was handled. In practice, Vagrant 0.x only introduced a handful of backwards incompatibilities during the entire development cycle, but the possibility of backwards incompatibilities is made clear so people aren't surprised.

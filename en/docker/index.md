@@ -1,0 +1,10 @@
+
+# Docker
+
+Vagrant comes with support out of the box for using Docker as a provider. This allows for your development environments to be backed by Docker containers rather than virtual machines. Additionally, it provides for a good workflow for developing Dockerfiles.
+
+> **Warning: Docker knowledge assumed.** We assume that you know what Docker is and that you're comfortable with the basics of Docker. If not, we recommend starting with another provider such as [VirtualBox][virtualbox].
+
+Use the navigation to the left to find a specific Docker topic to read more about.
+
+[virtualbox]: https://docs.vagrantup.com/v2/virtualbox/index.html

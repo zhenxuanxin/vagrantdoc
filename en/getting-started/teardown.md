@@ -1,4 +1,5 @@
-# TEARDOWN #
+
+# Teardown
 We now have a fully functional virtual machine we can use for basic web development. But now let's say it is time to switch gears, maybe work on another project, maybe go out to lunch, or maybe just time to go home. How do we clean up our development environment?
 
 With Vagrant, you suspend, halt, or destroy the guest machine. Each of these options have pros and cons. Choose the method that works best for you.

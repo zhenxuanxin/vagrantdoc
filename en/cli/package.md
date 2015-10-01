@@ -1,9 +1,10 @@
-# PACKAGE 
+
+# Package 
 **Command:** `vagrant package`
 
 This packages a currently running VirtualBox environment into a re-usable [box][box]. This command cannot be used with any other [provider][provider]. A future version of Vagrant will address packaging boxes for other providers. Until then, they must be made by hand.
 
-## OPTIONS ##
+## Options
 
 * `--base NAME` - Instead of packaging a VirtualBox machine that Vagrant manages, this will package a VirtualBox machine that VirtualBox manages. `NAME` should be the name or UUID of the machine from the VirtualBox GUI.
 

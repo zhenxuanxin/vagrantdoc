@@ -1,4 +1,5 @@
-# LOGIN #
+
+# Login
 **Command:** `vagrant login`
 
 The login command is used to authenticate with the [HashiCorp's Atlas][hashicorp] server. Logging is only necessary if you're accessing protected boxes or using [Vagrant Share][share].
@@ -7,14 +8,14 @@ Logging in is not a requirement to use Vagrant. The vast majority of Vagrant doe
 
 The reference of available command-line flags to this command is available below.
 
-### OPTIONS ###
+### Options
 * `--check` - This will check if you're logged in. In addition to outputting whether you're logged in or not, the command will have exit status 0 if you're logged in, and exit status 1 if you're not.
 
 * `--logout` - This will log you out if you're logged in. If you're already logged out, this command will do nothing. It is not an error to call this command if you're already logged out.
 
 * `--token` - This will set the Atlas login token manually to the provided string. It is assumed this token is a valid Atlas access token.
 
-## EXAMPLES ##
+## Examples
 
 Securely authenticate to Atlas using a username and password:
 ```

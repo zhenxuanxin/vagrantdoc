@@ -1,4 +1,5 @@
-# SHARE #
+
+# Share
 **Command:** `vagrant share`
 
 The share command initializes a Vagrant Share session, allowing you to share your Vagrant environment with anyone in the world, enabling collaboration directly in your Vagrant environment in almost any network environment.
@@ -7,7 +8,7 @@ You can learn about all the details of Vagrant Share in the [Vagrant Share secti
 
 The reference of available command-line flags to this command is available below.
 
-## OPTIONS ##
+## Options
 
 * `--disable-http` - Disables the creation of a publicly accessible HTTP endpoint to your Vagrant environment. With this set, the only way to access your share is with vagrant connect.
 

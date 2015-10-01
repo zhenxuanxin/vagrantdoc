@@ -1,4 +1,5 @@
-# SYNCED FOLDERS #
+
+# Synced Folders
 While it is cool to have a virtual machine so easily, not many people want to edit files using just plain terminal-based editors over SSH. Luckily with Vagrant you don't have to. By using *synced folders*, Vagrant will automatically sync your files to and from the guest machine.
 
 By default, Vagrant shares your project directory (remember, that is the one with the Vagrantfile) to the `/vagrant` directory in your guest machine. Run `vagrant up` again and SSH into your machine to see:

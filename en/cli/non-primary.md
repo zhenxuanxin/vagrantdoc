@@ -1,4 +1,5 @@
-# MORE COMMANDS #
+
+# More Commands
 In addition to the commands listed in the sidebar and shown in `vagrant -h`, Vagrant comes with some more commands that are hidden from basic help output. These commands are hidden because they're not useful to beginners or they're not commonly used. We call these commands "non-primary subcommands".
 
 You can view all subcommands, including the non-primary subcommands, by running `vagrant list-commands`, which itself is a non-primary subcommand!
@@ -7,7 +8,11 @@ Note that while you have to run a special command to list the non-primary subcom
 
 The list of non-primary commands is below. Click on any command to learn more about it.
 
-* docker-logs
-* docker-run
-* rsync
-* rsync-auto
+* [docker-logs][docker]
+* [docker-run][docker]
+* [rsync][rsync]
+* [rsync-auto][rsync-auto]
+
+[docker]: https://docs.vagrantup.com/v2/docker/commands.html
+[rsync]: https://docs.vagrantup.com/v2/cli/rsync.html
+[rsync-auto]: https://docs.vagrantup.com/v2/cli/rsync-auto.html

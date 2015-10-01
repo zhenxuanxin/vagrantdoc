@@ -1,4 +1,5 @@
-# REBUILD #
+
+# Rebuild
 When you're ready to come back to your project, whether it is tomorrow, a week from now, or a year from now, getting it up and running is easy:
 ```
 $ vagrant up

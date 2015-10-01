@@ -1,4 +1,5 @@
-# BOX #
+
+# Box
 **Command:** `vagrant box`
 
 This is the command used to manage (add, remove, etc.) [boxes][boxes].
@@ -12,7 +13,7 @@ The main functionality of this command is exposed via even more subcommands:
 * repackage
 * update
 
-## BOX ADD ##
+## Box Add
 **Command:** `vagrant box add ADDRESS`
 
 This adds a box with the given address to Vagrant. The address can be one of three things:
@@ -25,7 +26,7 @@ This adds a box with the given address to Vagrant. The address can be one of thr
 
 If an error occurs during the download or the download is interrupted with a Ctrl-C, then Vagrant will attempt to resume the download the next time it is requested. Vagrant will only attempt to resume a download for six hours after the initial download.
 
-### OPTIONS ###
+### Options
 * `--box-version VALUE` - The version of the box you want to add. By default, the latest version will be added. The value of this can be an exact version number such as "1.2.3" or it can be a set of version constraints. A version constraint looks like ">= 1.0, < 2.0".
 
 * `--cacert CERTFILE` - The certificate for the CA used to verify the peer. This should be used if the remote end doesn't use a standard root CA.
@@ -42,7 +43,7 @@ If an error occurs during the download or the download is interrupted with a Ctr
 
 * `--provider` PROVIDER - If given, Vagrant will verify the box you're adding is for the given provider. By default, Vagrant automatically detects the proper provider to use.
 
-### OPTIONS FOR DIRECT BOX FILES ###
+### Options For Direct Box Files
 The options below only apply if you're adding a box file directly (when you're not using a catalog).
 
 * `--checksum VALUE` - A checksum for the box that is downloaded. If specified, Vagrant will compare this checksum to what is actually downloaded and will error if the checksums do not match. This is highly recommended since box files are so large. If this is specified, `--checksum-type` must also be specified. If you're downloading from a catalog, the checksum is included within the catalog entry.
@@ -53,43 +54,43 @@ The options below only apply if you're adding a box file directly (when you're n
 
 > **Checksums for versioned boxes or boxes from HashiCorp's Atlas:** For boxes from HashiCorp's Atlas, the checksums are embedded in the metadata of the box. The metadata itself is served over TLS and its format is validated.
 
-## BOX LIST ##
+## Box List
 **Command:** `vagrant box list`
 
 This command lists all the boxes that are installed into Vagrant.
 
-## BOX OUTDATED ##
+## Box Outdated
 **Command:** vagrant box outdated
 
 This command tells you whether or not the box you're using in your current Vagrant environment is outdated. If the `--global` flag is present, every installed box will be checked for updates.
 
 Checking for updates involves refreshing the metadata associated with a box. This generally requires an internet connection.
 
-### OPTIONS ###
+### Options
 * `--global` - Check for updates for all installed boxes, not just the boxes for the current Vagrant environment.
 
-## BOX REMOVE ##
+## Box Remove
 **Command:** `vagrant box remove NAME`
 
 This command removes a box from Vagrant that matches the given name.
 
 If a box has multiple providers, the exact provider must be specified with the `--provider` flag. If a box has multiple versions, you can select what versions to delete with the `--box-version` flag.
 
-### OPTIONS ###
+### Options
 * `--box-version VALUE` - Version of version constraints of the boxes to remove. See documentation on this flag for `box add` for more details.
 
 * `--force` - Forces removing the box even if an active Vagrant environment is using it.
 
 * `--provider VALUE` - The provider-specific box to remove with the given name. This is only required if a box is backed by multiple providers. If there is only a single provider, Vagrant will default to removing it.
 
-## BOX REPACKAGE ##
+## Box Repackage
 **Command:** `vagrant box repackage NAME PROVIDER VERSION`
 
 This command repackages the given box and puts it in the current directory so you can redistribute it. The name, provider, and version of the box can be retrieved using `vagrant box list`.
 
 When you add a box, Vagrant unpacks it and stores it internally. The original `*.box` file is not preserved. This command is useful for reclaiming a `*.box` file from an installed Vagrant box.
 
-## BOX UPDATE ##
+## Box Update
 **Command:** `vagrant box update`
 
 This command updates the box for the current Vagrant environment if there are updates available. The command can also update a specific box (outside of an active Vagrant environment), by specifying the `--box` flag.
@@ -98,7 +99,7 @@ Note that updating the box will not update an already-running Vagrant machine. T
 
 If you just want to check if there are updates available, use the `vagrant box outdated` command.
 
-### OPTIONS ###
+### Options
 * `--box VALUE` - Name of a specific box to update. If this flag is not specified, Vagrant will update the boxes for the active Vagrant environment.
 
 * `--provider VALUE` - When `--box` is present, this controls what provider-specific box to update. This is not required unless the box has multiple providers. Without the `--box` flag, this has no effect.
