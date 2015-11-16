@@ -18,4 +18,4 @@ $ vagrant init
 
 如果你使用了版本控制，那意味着你得把Vagrantfile也提交到你项目的版本控制中。这样做了之后，其他参与这个项目的人就能得到一点好处，那就是不需要那些upfront工作。
 
-[1]: http://docs.vagrantup.com/v2/vagrantfile/
+[1]: /vagrantfile/

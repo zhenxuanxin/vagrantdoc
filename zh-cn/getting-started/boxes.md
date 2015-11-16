@@ -31,5 +31,5 @@ end
 
 为了可以查找免费的盒子，HashiCorp's Atlas允许你托管你自己的盒子，同样的，如果你计划为你们的组织创建盒子也是允许的。
 
-[1]: http://docs.vagrantup.com/v2/getting-started/
+[1]: /getting-started/
 [2]: https://atlas.hashicorp.com/boxes/search

@@ -17,6 +17,6 @@ $ vagrant up --provider=aws
 要了解更多关于提供者的信息，阅读[提供者][4]完整的文档。
 
 [1]: http://www.virtualbox.org/
-[2]: http://docs.vagrantup.com/v2/vmware/
+[2]: /vmware/
 [3]: http://github.com/mitchellh/vagrant-aws
-[4]: http://docs.vagrantup.com/v2/providers/
+[4]: /providers/

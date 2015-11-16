@@ -32,5 +32,5 @@ $ vagrant share
 
 Vagrant共享比简单的HTTP共享强大得多。要了解更多详情，查阅[完整的Vagrant共享文档][1].
 
-[1]: http://docs.vagrantup.com/v2/share/
+[1]: /share/
 [2]: https://atlas.hashicorp.com/

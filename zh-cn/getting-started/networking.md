@@ -20,4 +20,4 @@ end
 ## 其他网络
 Vagrant还有其他的网络选项，允许你给客户机分配静态IP地址，或者是将客户机桥接到现有的网络中。如果你对其他的选项感兴趣，请阅读[网络][1]页面。
 
-[1]: http://docs.vagrantup.com/v2/networking/
+[1]: /networking/

@@ -23,8 +23,8 @@ $ vagrant up
 
 本指南的其余部分将引导你设置一个更完整的项目，涵盖Vagrant的更多功能。
 
-[1]: https://docs.vagrantup.com/v2/why-vagrant/
+[1]: /why-vagrant/
 [2]: http://www.virtualbox.org/
-[3]: https://docs.vagrantup.com/v2/getting-started/providers.html
+[3]: /getting-started/providers.html
 [4]: http://www.amazon.com/gp/product/1449335837/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1449335837&linkCode=as2&tag=vagrant-20
-[5]: https://docs.vagrantup.com/v2/installation/
+[5]: /installation/
