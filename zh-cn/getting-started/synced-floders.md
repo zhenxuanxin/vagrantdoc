@@ -22,4 +22,4 @@ foo Vagrantfile
 
 通过[同步目录][1]，你可以在你的主机上继续使用你自己的编辑器，并且所欲的文件自动同步到客户机上。
 
-[synced-folders]: /synced-folders/
+[1]: /synced-folders/
