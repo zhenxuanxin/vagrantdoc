@@ -8,4 +8,4 @@
 
 **然而**，如果你的Vagrant是通过RubyGems安装的，你必须在安装最新版Vagrant之前使用`gem uninstall`卸载老版本。基于RubyGems的安装方式已经被移除了。
 
-[1]: https://docs.vagrantup.com/v2/installation/backwards-compatibility.html
+[1]: /installation/backwards-compatibility

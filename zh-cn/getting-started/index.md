@@ -25,6 +25,6 @@ $ vagrant up
 
 [1]: /why-vagrant/
 [2]: http://www.virtualbox.org/
-[3]: /getting-started/providers.html
+[3]: /getting-started/providers
 [4]: http://www.amazon.com/gp/product/1449335837/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1449335837&linkCode=as2&tag=vagrant-20
 [5]: /installation/

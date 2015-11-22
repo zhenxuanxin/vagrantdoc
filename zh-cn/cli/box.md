@@ -16,94 +16,94 @@
 ## Box Add
 **命令:** `vagrant box add ADDRESS`
 
-This adds a box with the given address to Vagrant. The address can be one of three things:
+这会将指定地址处的盒子添加到Vagrant。地址可以是如下三种之一：
 
-* A shorthand name from the [public catalog of available Vagrant images][hashicorp], such as "hashicorp/precise64".
+* 来自[公共目录][2]的镜像速记名，例如“hashicorp/precise64”。
 
-* File path or HTTP URL to a box in a [catalog][hashicorp]. For HTTP, basic authentication is supported and `http_proxy` environmental variables are respected. HTTPS is also supported.
+* 文件路径或者[hashicorp目录][2]的HTTP URL。若是HTTP URL，基础是支持`http_proxy`环境变量的。当然了HTTPS也是支持的。
 
-* URL directly a box file. In this case, you must specify a `--name` flag (see below) and versioning/updates won't work.
+* 一个盒子文件的直接URL。这种情况，你必须指定一个`name`标记（如下所示）并且版本控制和更新是不能工作的。
 
-If an error occurs during the download or the download is interrupted with a Ctrl-C, then Vagrant will attempt to resume the download the next time it is requested. Vagrant will only attempt to resume a download for six hours after the initial download.
+如果在下载或者使用Ctrl-C中断了下载的时候产生了错误，在下次请求的时候Vagrant会尝试恢复下载。Vagrant会只尝试下载那些初始下载六小时内的下载。
 
-### Options
-* `--box-version VALUE` - The version of the box you want to add. By default, the latest version will be added. The value of this can be an exact version number such as "1.2.3" or it can be a set of version constraints. A version constraint looks like ">= 1.0, < 2.0".
+### 选项
+* `--box-version VALUE` - 指定你想添加的盒子的版本。默认的，罪行版本会被添加。值可以为准确的版本号，如“1.2.3”或者一个条件的版本集合。版本条件可以像这样“>= 1.0, < 2.0”。
 
-* `--cacert CERTFILE` - The certificate for the CA used to verify the peer. This should be used if the remote end doesn't use a standard root CA.
+* `--cacert CERTFILE` - 指定CA用于验证连接的证书。可用于远程端点没使用标准根CA的情况。
 
-* `--capath CERTDIR` - The certificate directory for the CA used to verify the peer. This should be used if the remote end doesn't use a standard root CA.
+* `--capath CERTDIR` - 指定CA用于验证连接的证书的目录。可用于远点没有使用标准跟CA的情况。
 
-* `--cert CERTFILE` - A client certificate to use when downloading the box, if necessary.
+* `--cert CERTFILE` - 当下载盒子的时候如果需要，指定客户端证书。
 
-* `--clean` - If given, Vagrant will remove any old temporary files from prior downloads of the same URL. This is useful if you don't want Vagrant to resume a download from a previous point, perhaps because the contents changed.
+* `--clean` - 如果有此参数，Vagrant会移除任何之前相同URL下载的旧的缓存文件。这主要用于当你不想从上次下载点恢复，可能内容变更了的情况。
 
-* `--force` - When present, the box will be downloaded and overwrite any existing box with this name.
+* `--force` - 当提出此参数，盒子会被下载下来覆盖掉任何存在的相同名字的盒子。
 
-* `--insecure` - When present, SSL certificates won't be verified if the URL is an HTTPS URL.
+* `--insecure` - 当提出此参数，即使URL是HTTPS的URL，SSL证书也不会被验证。
 
-* `--provider` PROVIDER - If given, Vagrant will verify the box you're adding is for the given provider. By default, Vagrant automatically detects the proper provider to use.
+* `--provider` PROVIDER - 如果给出此参数，Vagrant会用给出的提供者验证你准备添加的盒子。默认的，Vagrant会自动命中使用合适的提供者。
 
-### Options For Direct Box Files
-The options below only apply if you're adding a box file directly (when you're not using a catalog).
+### 直接盒子文件的选项
+下列选项在你添加直接盒子的时候（当你没有使用目录的时候）可用。
 
-* `--checksum VALUE` - A checksum for the box that is downloaded. If specified, Vagrant will compare this checksum to what is actually downloaded and will error if the checksums do not match. This is highly recommended since box files are so large. If this is specified, `--checksum-type` must also be specified. If you're downloading from a catalog, the checksum is included within the catalog entry.
+* `--checksum VALUE` - 指明下载的盒子校验和。如果指定了，Vagrant会将实际下载的盒子的校验和与给出值进行比较的，如果校验和不符合，会给出一个错误。非常建议盒子文件是非常大的情况。如果你是从目录下载的，校验和是包含在目录入口中的。
 
-* `--checksum-type TYPE` - The type of checksum that `--checksum` is if it is specified. Supported values are currently "md5", "sha1", and "sha256".
+* `--checksum-type TYPE` - 如果指定了`--checksum`，就是校验和的类型。目前支持的值由“md5”，“sha1”和“sha256”。
 
-* `--name VALUE` - Logical name for the box. This is the value that you would put into `config.vm.box` in your Vagrantfile. When adding a box from a catalog, the name is included in the catalog entry and doesn't have to be specified.
+* `--name VALUE` - 盒子的逻辑名称。这个名字是你想放在你的Vagrantfile中`config.vm.box`的值。当从目录添加一个盒子的时候，名字是包含在目录入口中的，不必指定。
 
-> **Checksums for versioned boxes or boxes from HashiCorp's Atlas:** For boxes from HashiCorp's Atlas, the checksums are embedded in the metadata of the box. The metadata itself is served over TLS and its format is validated.
+> **来自HashiCorp's Atlas的盒子和版本控制的盒子的校验和：** 来自的盒子，校验和是嵌在盒子的元数据中的。元数据自己是通过TLS服务并且它的格式是有效的。
 
 ## Box List
-**Command:** `vagrant box list`
+**命令:** `vagrant box list`
 
-This command lists all the boxes that are installed into Vagrant.
+这个命令会列出所有已经安装到Vagrant的盒子。
 
 ## Box Outdated
-**Command:** vagrant box outdated
+**命令:** vagrant box outdated
 
-This command tells you whether or not the box you're using in your current Vagrant environment is outdated. If the `--global` flag is present, every installed box will be checked for updates.
+这个命令会告诉你当前使用的Vagrant环境是不是已经过期了的。如果输入了`--global`标志，所有已安装的盒子都会被检查更新。
 
-Checking for updates involves refreshing the metadata associated with a box. This generally requires an internet connection.
+检查更新牵涉到刷新关联到盒子的元数据。这通常需要互联网连接。
 
-### Options
-* `--global` - Check for updates for all installed boxes, not just the boxes for the current Vagrant environment.
+### 选项
+* `--global` - 检查更新所有已安装盒子。而不仅只是当前的Vagrant环境。
 
 ## Box Remove
-**Command:** `vagrant box remove NAME`
+**命令:** `vagrant box remove NAME`
 
-This command removes a box from Vagrant that matches the given name.
+这个命令会从Vagrant移除符合给出名字的盒子。
 
-If a box has multiple providers, the exact provider must be specified with the `--provider` flag. If a box has multiple versions, you can select what versions to delete with the `--box-version` flag.
+如果盒子是多个提供者的。必须通过`--provider`标志指定准确的提供者。如果一个盒子有多个版本，你可以通过`--box-version`标志选中一个版本。
 
-### Options
-* `--box-version VALUE` - Version of version constraints of the boxes to remove. See documentation on this flag for `box add` for more details.
+### 选项
+* `--box-version VALUE` - 指定需要移除的盒子的版本条件。查阅文档中`box add`命令关于此标志的详细信息。
 
-* `--force` - Forces removing the box even if an active Vagrant environment is using it.
+* `--force` - 强制移除活动的Vagrant环境正在使用的盒子。
 
-* `--provider VALUE` - The provider-specific box to remove with the given name. This is only required if a box is backed by multiple providers. If there is only a single provider, Vagrant will default to removing it.
+* `--provider VALUE` - 使用给出的名字指定要移除的盒子的提供者。仅在该盒子后面是多个提供者的时候使用这个标志。如果只是单提供者，Vagrant会默认的移除它。
 
 ## Box Repackage
-**Command:** `vagrant box repackage NAME PROVIDER VERSION`
+**命令:** `vagrant box repackage NAME PROVIDER VERSION`
 
-This command repackages the given box and puts it in the current directory so you can redistribute it. The name, provider, and version of the box can be retrieved using `vagrant box list`.
+这个命令会对给定的盒子进行重新打包，并把它丢到当前目录，所以你可以再分发它。名字，提供者和版本可以通过使用`vagrant box list`获得。
 
-When you add a box, Vagrant unpacks it and stores it internally. The original `*.box` file is not preserved. This command is useful for reclaiming a `*.box` file from an installed Vagrant box.
+如果你添加一个盒子，Vagrant会在内部对它进行解包并保存。原始的`*.box`文件不会被保存。这个命令在从已安装Vagrant盒子中再生一个`*.box`文件时候非常有用。
 
 ## Box Update
-**Command:** `vagrant box update`
+**命令:** `vagrant box update`
 
-This command updates the box for the current Vagrant environment if there are updates available. The command can also update a specific box (outside of an active Vagrant environment), by specifying the `--box` flag.
+这个命令会在当前Vagrant环境有可用更新的时候将其更新。这个命令只需要指定`--box`标志就也可以更新一个特殊的盒子（在活跃Vagrant环境之外的）。
 
-Note that updating the box will not update an already-running Vagrant machine. To reflect the changes in the box, you'll have to destroy and bring back up the Vagrant machine.
+注意，更新盒子不会更新正在运行的Vagrant机器。要反射盒子的更新，你不得不销毁掉再恢复Vagrant机器。
 
-If you just want to check if there are updates available, use the `vagrant box outdated` command.
+如果你只想检查它有没有可用更新，使用`vagrant box outdated`命令。
 
-### Options
-* `--box VALUE` - Name of a specific box to update. If this flag is not specified, Vagrant will update the boxes for the active Vagrant environment.
+### 选项
+* `--box VALUE` - 指定需要更新的盒子的名字。如果这个标志没有指定，Vagrant会更新活跃的Vagrant环境的盒子。
 
-* `--provider VALUE` - When `--box` is present, this controls what provider-specific box to update. This is not required unless the box has multiple providers. Without the `--box` flag, this has no effect.
+* `--provider VALUE` - 当有`--box`的时候，这会控制指定的提供者的盒子进行更新。只有当盒子是有多提供者的时候着才是必须的。没有`--box`标志，这是没效的。
 
 [1]: /boxes
-[hashicorp]: https://atlas.hashicorp.com/boxes/search
+[2]: https://atlas.hashicorp.com/boxes/search
 
